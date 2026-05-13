@@ -6,7 +6,7 @@ set -euo pipefail
 
 INIT_PROMPT='@RELAY.md 파일을 읽고 핸드오프 노트를 따라 이전 세션의 작업을 이어서 진행해줘.'
 CWD="$(pwd)"
-CMD="cd \"$CWD\" && exec codex \"$INIT_PROMPT\""
+CMD="cd \"$CWD\" && codex \"$INIT_PROMPT\"; exec bash"
 
 if   command -v ghostty             >/dev/null 2>&1; then setsid ghostty             -e bash -c "$CMD" </dev/null >/dev/null 2>&1 &
 elif command -v xdg-terminal-exec   >/dev/null 2>&1; then setsid xdg-terminal-exec  bash -c "$CMD" </dev/null >/dev/null 2>&1 &

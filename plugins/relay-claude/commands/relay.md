@@ -10,7 +10,7 @@ description: 현재 세션 컨텍스트를 RELAY.md에 저장하고 Codex CLI로
 `Bash` 툴로 다음을 실행해.
 
 ```bash
-[ -f ./RELAY.md ] && mv ./RELAY.md ./RELAY.bak.md
+[ -f ./RELAY.md ] && mv ./RELAY.md ./RELAY.bak.md || true
 ```
 
 ## 2단계. RELAY.md 작성
@@ -58,7 +58,7 @@ description: 현재 세션 컨텍스트를 RELAY.md에 저장하고 Codex CLI로
 ```bash
 INIT_PROMPT='@RELAY.md 파일을 읽고 핸드오프 노트를 따라 이전 세션의 작업을 이어서 진행해줘.'
 CWD="$(pwd)"
-CMD="cd \"$CWD\" && exec codex \"$INIT_PROMPT\""
+CMD="cd \"$CWD\" && codex \"$INIT_PROMPT\"; exec bash"
 if   command -v ghostty             >/dev/null 2>&1; then setsid ghostty             -e bash -c "$CMD" </dev/null >/dev/null 2>&1 &
 elif command -v xdg-terminal-exec   >/dev/null 2>&1; then setsid xdg-terminal-exec  bash -c "$CMD" </dev/null >/dev/null 2>&1 &
 elif command -v ptyxis              >/dev/null 2>&1; then setsid ptyxis --new-window -d "$CWD" -- bash -c "$CMD" </dev/null >/dev/null 2>&1 &
