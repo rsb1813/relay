@@ -40,7 +40,7 @@ codex plugin marketplace add rsb1813/relay
 
 ## RELAY.md 형식
 
-저장되는 파일은 아래 섹션을 포함한다. 형식 참조본은 `shared/RELAY-template.md`에 있다.
+저장되는 파일은 아래 섹션을 포함한다.
 
 | 섹션 | 내용 |
 |---|---|

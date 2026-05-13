@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Codex → Claude Code 핸드오프. 새 터미널 창에서 claude를 첫 프롬프트와 함께 실행 (수동 호출/디버깅용)
+# WARNING: 디버그용 사본. 정식 터미널 감지 체인은 plugins/relay-codex/commands/relay.md (3단계) 에 있음.
+#          터미널 에뮬레이터를 추가/변경할 때는 두 곳을 모두 수정할 것.
 set -euo pipefail
 
 INIT_PROMPT='@RELAY.md 파일을 읽고 핸드오프 노트를 따라 이전 세션의 작업을 이어서 진행해줘.'
