@@ -7,7 +7,7 @@
 셸 명령으로 다음을 실행해.
 
 ```bash
-[ -f ./RELAY.md ] && mv ./RELAY.md ./RELAY.bak.md || true
+if [ -f ./RELAY.md ]; then mv ./RELAY.md ./RELAY.bak.md; fi
 ```
 
 ## 2단계. RELAY.md 작성

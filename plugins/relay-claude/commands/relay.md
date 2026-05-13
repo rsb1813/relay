@@ -10,7 +10,7 @@ description: 현재 세션 컨텍스트를 RELAY.md에 저장하고 Codex CLI로
 `Bash` 툴로 다음을 실행해.
 
 ```bash
-[ -f ./RELAY.md ] && mv ./RELAY.md ./RELAY.bak.md || true
+if [ -f ./RELAY.md ]; then mv ./RELAY.md ./RELAY.bak.md; fi
 ```
 
 ## 2단계. RELAY.md 작성
