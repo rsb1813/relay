@@ -1,0 +1,9 @@
+{
+  "name": "relay-claude",
+  "description": "Codex CLI로 세션 컨텍스트 핸드오프 (RELAY.md 저장 후 새 터미널에서 codex 실행)",
+  "version": "0.1.0",
+  "author": {
+    "name": "jolib"
+  },
+  "keywords": ["relay", "handoff", "codex", "cli-switch"]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "relay-codex",
+  "version": "0.1.0",
+  "description": "Claude Code로 세션 컨텍스트 핸드오프 (RELAY.md 저장 후 새 터미널에서 claude 실행)",
+  "author": "jolib",
+  "license": "MIT",
+  "keywords": ["relay", "handoff", "claude-code", "cli-switch"],
+  "interface": {
+    "displayName": "Relay (→ Claude Code)",
+    "shortDescription": "Hand off session context to Claude Code",
+    "developerName": "jolib",
+    "category": "Productivity",
+    "capabilities": ["commands"]
+  }
+}
